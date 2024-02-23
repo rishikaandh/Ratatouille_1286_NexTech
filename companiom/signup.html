@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sign Up</h1>
+    </header>
+    <main>
+      <section class="container">
+        <form action="#" method="post">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required />
+
+          <label for="interest">Interest:</label>
+          <select id="interest" name="interest" required>
+            <option value="">Select an interest</option>
+            <option value="dance">Dance</option>
+            <option value="music">Music</option>
+            <option value="football">Football</option>
+            <option value="cricket">Cricket</option>
+          </select>
+
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="13" max="100" required />
+
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>
+          Already have an account? <a href="login.html">Log in here</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map | Virtual Campus Guide</title>
+  <link rel="stylesheet" href="map.css">
+  <!-- Add leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <h1>Campus Map</h1>
+    <input type="text" id="search" placeholder="Search...">
+  </header>
+  <div id="map"></div>
+  
+  <!-- Add leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([37.7749, -122.4194], 13);
+    
+    // Add tile layer (e.g., OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Add markers for facilities
+    L.marker([37.7749, -122.4194]).addTo(map).bindPopup("<b>Building Name 1</b><br>Facility type: Building");
+    L.marker([37.7748, -122.4188]).addTo(map).bindPopup("<b>Parking Area 1</b><br>Facility type: Parking");
+    L.marker([37.7750, -122.4200]).addTo(map).bindPopup("<b>Dining Hall 1</b><br>Facility type: Dining");
+
+    // Indoor navigation
+    // Add additional layers for indoor navigation (e.g., using GeoJSON data)
+    // You can implement this based on your specific requirements and available data
+
+    // Search functionality
+    var searchInput = document.getElementById('search');
+    searchInput.addEventListener('input', function() {
+      // Implement search functionality to filter markers based on user input
+    });
+  </script>
+</body>
+</html>
